@@ -8,10 +8,16 @@
 </head>
 <body class="bg-[#0f172a] text-white">
 
-  <!-- NAVBAR -->
-  <header class="border-b border-gray-800 bg-[#0f172a] sticky top-0 z-50">
+<!-- NAVBAR -->
+<header class="border-b border-gray-800 bg-[#0f172a] sticky top-0 z-50">
 
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <nav class="max-w-7xl mx-auto px-6 py-4">
+
+    <!-- Hidden Checkbox -->
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+    <!-- Top Navbar -->
+    <div class="flex items-center justify-between">
 
       <!-- Logo -->
       <div class="flex items-center gap-2">
@@ -27,7 +33,58 @@
       </div>
 
       <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center gap-10 text-sm text-gray-300">
+      <div class="hidden md:flex items-center gap-10">
+
+        <ul class="flex items-center gap-10 text-gray-300">
+
+          <li>
+            <a href="#" class="hover:text-[#3b82f6] transition">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="hover:text-[#3b82f6] transition">
+              Services
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="hover:text-[#3b82f6] transition">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="hover:text-[#3b82f6] transition">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+        <button class="bg-[#3b82f6] px-5 py-2 rounded-lg hover:opacity-80 transition">
+
+          Get Started
+
+        </button>
+
+      </div>
+
+      <!-- Hamburger Button -->
+      <label
+        for="menu-toggle"
+        class="md:hidden cursor-pointer text-3xl text-white"
+      >
+        ☰
+      </label>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="hidden peer-checked:block md:hidden mt-6">
+
+      <ul class="flex flex-col gap-5 text-gray-300">
 
         <li>
           <a href="#" class="hover:text-[#3b82f6] transition">
@@ -55,41 +112,17 @@
 
       </ul>
 
-      <!-- Right Buttons -->
-      <div class="hidden md:flex items-center gap-4">
+      <button class="mt-6 w-full bg-[#3b82f6] px-5 py-3 rounded-lg hover:opacity-80 transition">
 
-        <button class="bg-[#3b82f6] px-5 py-2 rounded-lg hover:opacity-80 transition">
-          Get Started
-        </button>
-
-      </div>
-
-      <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden text-3xl">
-        ☰
-      </button>
-
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden px-6 pb-6">
-
-      <ul class="space-y-4 text-gray-300">
-
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-
-      </ul>
-
-      <button class="mt-5 bg-[#3b82f6] px-5 py-2 rounded-lg">
         Get Started
+
       </button>
 
     </div>
 
-  </header>
+  </nav>
+
+</header>
 
   <!-- HERO SECTION -->
   <section class="py-20">
@@ -424,8 +457,6 @@
     </div>
 
   </footer>
-
-  <script src="./js/script.js"></script>
 
 </body>
 </html>
